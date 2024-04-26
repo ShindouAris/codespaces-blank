@@ -63,7 +63,7 @@ async def load_cogs(bot, confession_channel_id, confession_create_channel_id):
         if filename.endswith(".py"):
             cog_name = f"{cogs_dir}.{filename[:-3]}"
             try:
-                bot.load_extension(cog_name)
+                await bot.load_extension(cog_name)
                 print(Fore.CYAN + f"INFO [{time}]:" + Style.RESET_ALL + f"✅ Đã tải cogs: {cog_name}" + Style.RESET_ALL)
             except Exception as e:
                 print(Fore.RED + f"ERROR [{time}]:" + Style.RESET_ALL + f"❌ Lỗi khi tải cogs: {cog_name}\n{e}" + Style.RESET_ALL)
