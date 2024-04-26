@@ -56,7 +56,7 @@ c.execute('''
 conn.commit()
 conn.close()
 
-async def load_cogs(bot, confession_channel_id, confession_create_channel_id, command_prefix):
+async def load_cogs(bot, confession_channel_id, confession_create_channel_id):
     time = datetime.datetime.now().strftime("%d/%m/%Y|%H:%M:%S")
     cogs_dir = "cogs"
     for filename in os.listdir(cogs_dir):
